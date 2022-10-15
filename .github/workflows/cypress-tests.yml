@@ -1,4 +1,4 @@
-name: Pipelines
+name: cypress tests
 
 on:
   workflow_dispatch:
