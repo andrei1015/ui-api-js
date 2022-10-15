@@ -19,5 +19,5 @@ This last test creates a new order. Unfortunately retrieving orders seems to onl
 The tests are run from the CLI using newman and are from a postman collection.
 
 ```
-newman run api/pet_store.json
+newman run api/pet-store.json
 ```
