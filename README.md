@@ -13,7 +13,7 @@ npx cypress run
 ```
 or
 ```
-newman run api/pet-store.json
+npx newman run api/pet-store.json
 ```
 
 # Scenarios
@@ -55,5 +55,5 @@ I have chosen the scenarios that make most sense for a minimal setup like this. 
 
 
 ```
-newman run api/pet-store.json
+npx newman run api/pet-store.json
 ```

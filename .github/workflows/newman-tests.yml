@@ -14,4 +14,4 @@ jobs:
       with:
         node-version: 16
     - run: npm ci
-    - run: newman run api/pet-store.json
+    - run: npx newman run api/pet-store.json

@@ -1,7 +1,7 @@
 let value;
 
-describe('ajax call', () => {
-    it('wait for ajax call to finish', () => {
+describe('dynamic table', () => {
+    it('dynamically find something in a table', () => {
         cy.visit('');
 
         cy.get('a').contains('Dynamic Table').click();
