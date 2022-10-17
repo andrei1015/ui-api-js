@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-17T07:50:24.280Z",
+    "end": "2022-10-17T07:50:41.034Z",
+    "duration": 16754,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "88ddefb2-e317-4d2d-b3ff-05b02a3fc252",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ajax.cy.js",
+      "file": "cypress\\e2e\\ajax.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cc2ba3f4-fbac-49a8-af59-f3f0488f9034",
+          "title": "ajax call",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "wait for ajax call to finish",
+              "fullTitle": "ajax call wait for ajax call to finish",
+              "timedOut": null,
+              "duration": 16718,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('');\ncy.get('a').contains('AJAX Data').click();\ncy.intercept('/ajaxdata').as('ajaxCall');\ncy.get('button#ajaxButton').click();\ncy.wait('@ajaxCall');\ncy.get('#content .bg-success').should('be.visible').and('contain', 'Data loaded with AJAX get request.');",
+              "err": {},
+              "uuid": "d2a384d7-1e5d-4aff-9036-20eac4dea7ed",
+              "parentUUID": "cc2ba3f4-fbac-49a8-af59-f3f0488f9034",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d2a384d7-1e5d-4aff-9036-20eac4dea7ed"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16718,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

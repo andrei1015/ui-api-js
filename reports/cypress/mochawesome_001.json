@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-17T07:50:44.427Z",
+    "end": "2022-10-17T07:50:45.544Z",
+    "duration": 1117,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "592e4198-daf6-4c32-a2de-34b85aec4ffa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\dynamictable.cy.js",
+      "file": "cypress\\e2e\\dynamictable.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7dcd4765-e6b3-49e4-9793-1a50cbd79233",
+          "title": "dynamic table",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "dynamically find something in a table",
+              "fullTitle": "dynamic table dynamically find something in a table",
+              "timedOut": null,
+              "duration": 1083,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('');\ncy.get('a').contains('Dynamic Table').click();\ncy.get('[role=\"row\"]').contains(\"Chrome\").parent().within(() => {\n  cy.get('[role=\"cell\"]').contains('%').then($value => {\n    value = $value.text();\n  });\n});\ncy.get('body').then(() => {\n  cy.get('[class=\"bg-warning\"]').should('contain', 'Chrome CPU: ' + value);\n});",
+              "err": {},
+              "uuid": "5027b66c-4ed7-4c23-9aa1-1c1a1917ea2c",
+              "parentUUID": "7dcd4765-e6b3-49e4-9793-1a50cbd79233",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5027b66c-4ed7-4c23-9aa1-1c1a1917ea2c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1083,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/cypress",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
